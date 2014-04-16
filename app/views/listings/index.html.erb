@@ -1,0 +1,18 @@
+<h3> Here are some current available listings: </h3>
+
+<ul>
+  <% @listings.each do |listing| %>
+  <li> <%=listing.address %> </li>
+  <li> <%=listing.neighborhood %> </li>
+  <li> <%=listing.city %> </li>
+  <li> <%= number_to_currency(listing.price) %> </li>
+  <li> <%=listing.home_type %> </li>
+  <li> <%=listing.description %> </li>
+  <hr>
+  <% end %>
+</ul></br>
+
+
+<h4> Would you like to list a property?
+  <%= link_to "New listing", new_listing_path, :class=> "btn btn-default" %>
+</h4>

@@ -1,0 +1,32 @@
+<%= form_for(@listing) do |f| %>
+  <div class="form-group">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :neighborhood %><br>
+    <%= f.text_field :neighborhood %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+
+  <div class="form-group">
+    <%= f.select :home_type, [['Home Type'], ['House'], ['Apartment'], ['Boat'], ['Yurt'], ['Van'], ['Hobbit Hole']]  %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+
+  <%= f.submit(:class => "btn btn-primary") %>
+<% end %>

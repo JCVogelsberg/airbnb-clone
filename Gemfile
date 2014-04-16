@@ -9,6 +9,7 @@ gem 'turbolinks'
 gem 'bootstrap-sass'
 gem 'bcrypt-ruby'
 gem 'launchy'
+gem 'devise'
 
 
 group :development do
@@ -16,7 +17,6 @@ group :development do
   gem 'binding_of_caller'
   gem 'quiet_assets'
   gem 'letter_opener'
-  gem 'devise'
 end
 
 group :test, :development do

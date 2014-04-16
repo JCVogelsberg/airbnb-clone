@@ -1,1 +1,7 @@
-<h1>Welcome to AirJnM</h1>
+<ul>
+  <% @users.each do |user| %>
+  <li> <%= user.email %> </li>
+  <% end %>
+</ul>
+
+<%= link_to "New listing", new_listing_path, :class=> "btn btn-default" %>
