@@ -6,7 +6,7 @@ class ListingsController < ApplicationController
 
   def index
     @listings = Listing.all
-  end
+   end
 
   def create
     @listing = Listing.new listing_params

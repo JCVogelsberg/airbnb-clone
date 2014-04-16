@@ -10,6 +10,7 @@ gem 'bootstrap-sass'
 gem 'bcrypt-ruby'
 gem 'launchy'
 gem 'devise'
+gem 'textacular'
 
 
 group :development do
