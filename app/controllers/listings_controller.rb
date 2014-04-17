@@ -35,31 +35,18 @@ class ListingsController < ApplicationController
   def update
     @listing = Listing.find params[:id]
     if @listing.update listing_params
-      respond_to do |format|
-        format.html do
+      # respond_to do |format|
+      #   format.html do
           flash[:notice] = "Edit successful."
-          redirect_to root_url
-        end
-        format.js
-      end
+          redirect_to "root_url"
+        # end
+        # format.js
+      # end
     else
       flash[:alert] = "Listing not updated. Please try again."
       render 'edit'
     end
   end
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   def destroy
     @listing = Listing.find params[:id]

@@ -2,18 +2,16 @@
 
 <h3><%= @listing.address %> </h3>
 <br>
-<p> <%= @listing.neighborhood %> </p>
+<p>  <%= @listing.city %> (<%= @listing.neighborhood %>) </p>
 <br>
-<p> <%= @listing.city %> </p>
-<br>
-<p> <%= @listing.price %> </p>
+<p> <%= number_to_currency(@listing.price) %> </p>
 <br>
 <p> <%= @listing.home_type %> </p>
 <br>
 <p> <%= @listing.description %> </p>
 <br>
 
-<p><%= link_to "Edit listing", edit_listing_path(:id), id: "new_link", remote: true, :class=> "btn btn-default" %></p>
+<p><%= link_to "Edit listing", edit_listing_path(@listing.id), :class=> "btn btn-default" %></p>
 <br>
 <p><%= link_to "Delete", listing_path(@listing),
                          :data => {:confirm => "You sure?",

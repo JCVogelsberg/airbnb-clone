@@ -9,7 +9,7 @@
 
 <ul id="listings">
   <% @listings.each do |listing| %>
-  <li> <%= link_to "#{listing.address}", listing_path(:id), :class=> "btn btn-default" %> </li>
+  <li> <%= link_to "#{listing.address}", listing_path("#{listing.id}"), :class=> "btn btn-default" %> </li>
   <li> <%=listing.neighborhood %> </li>
   <li> <%=listing.city %> </li>
   <li> <%=number_to_currency(listing.price) %> </li>
@@ -18,3 +18,10 @@
   <hr>
   <% end %>
 </ul></br>
+
+
+
+
+
+
+
