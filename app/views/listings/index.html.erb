@@ -1,11 +1,11 @@
 <h3> Here are some current available listings: </h3>
 
-<ul>
+<ul id="listings">
   <% @listings.each do |listing| %>
   <li> <%=listing.address %> </li>
   <li> <%=listing.neighborhood %> </li>
   <li> <%=listing.city %> </li>
-  <li> <%= number_to_currency(listing.price) %> </li>
+  <li> <%=number_to_currency(listing.price) %> </li>
   <li> <%=listing.home_type %> </li>
   <li> <%=listing.description %> </li>
   <hr>

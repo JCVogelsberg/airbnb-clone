@@ -5,9 +5,8 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :neighborhood %><br>
-    <%= f.text_field :neighborhood %>
-  </div>
+    <%= f.select :neighborhood, [['Neighborhood'], ['Central'], ['North-East'], ['North-West'], ['South-East'], ['South-West']]  %>
+   </div>
 
   <div class="form-group">
     <%= f.label :city %><br>
