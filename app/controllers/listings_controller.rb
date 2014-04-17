@@ -14,7 +14,7 @@ class ListingsController < ApplicationController
       respond_to do |format|
         format.html do
          flash[:notice] = "Posting successful."
-          redirect_to root_url
+          redirect_to listing_path
         end
         format.js
       end

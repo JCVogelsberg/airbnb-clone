@@ -1,15 +1,8 @@
 <h3> Here are some current available listings: </h3>
-<br>
-<h4> Would you like to list a property?
-  <%= link_to "New listing", new_listing_path, id: "new_link", remote: true, :class=> "btn btn-default" %>
-</h4>
-
-<br>
-<br>
 
 <ul id="listings">
   <% @listings.each do |listing| %>
-  <li> <%= link_to "#{listing.address}", listing_path(:id), :class=> "btn btn-default" %> </li>
+  <li> <%=listing.address %> </li>
   <li> <%=listing.neighborhood %> </li>
   <li> <%=listing.city %> </li>
   <li> <%=number_to_currency(listing.price) %> </li>
@@ -18,3 +11,12 @@
   <hr>
   <% end %>
 </ul></br>
+
+
+<h4> <%= link_to "New listing", new_listing_path, id: "new_link", remote: true, :class=> "btn btn-default" %>
+
+  <%= link_to "Edit listing", new_user_listing_path(new_user.id), id: "new_link", remote: true, :class=> "btn btn-default" %>
+
+
+
+</h4>
