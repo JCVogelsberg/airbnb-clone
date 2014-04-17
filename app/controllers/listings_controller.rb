@@ -6,13 +6,18 @@ class ListingsController < ApplicationController
 
   def index
     @listings = Listing.all
-   end
+  end
 
   def create
     @listing = Listing.new listing_params
     if @listing.save
-          flash[:notice] = "Posting successful."
+      respond_to do |format|
+        format.html do
+         flash[:notice] = "Posting successful."
           redirect_to root_url
+        end
+        format.js
+      end
     else
       flash[:alert] = "Posting failure. Please try again."
       render 'new'

@@ -32,11 +32,12 @@
         <h1><i><center><strong>Welcome to AirJnM</strong></center></i></h1>
 
         <center>
-          <%= form_tag("/search", method: "get") do %>
-          <%= label_tag(:q, "Search for a property!") %>
-          <%= text_field_tag(:q) %>
-          <%= submit_tag("Search") %>
-        <% end %>
+          <%= form_tag listings_path, method: :get do %>
+          <p>
+            <%= text_field_tag :query, params[:query] %>
+            <%= submit_tag "Search", name: nil %>
+          </p>
+          <% end %>
       </center>
 
       </div>
