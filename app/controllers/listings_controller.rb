@@ -13,8 +13,8 @@ class ListingsController < ApplicationController
     if @listing.save
       respond_to do |format|
         format.html do
-         flash[:notice] = "Posting successful."
-          redirect_to listing_path
+          flash[:notice] = "Posting successful."
+          redirect_to root_path
         end
         format.js
       end
@@ -35,13 +35,13 @@ class ListingsController < ApplicationController
   def update
     @listing = Listing.find params[:id]
     if @listing.update listing_params
-      # respond_to do |format|
-      #   format.html do
+       # respond_to do |format|
+       #   format.html do
           flash[:notice] = "Edit successful."
-          redirect_to "root_url"
-        # end
-        # format.js
-      # end
+          redirect_to root_path
+         # end
+         # format.js { redirect_to root_path }
+       # end
     else
       flash[:alert] = "Listing not updated. Please try again."
       render 'edit'

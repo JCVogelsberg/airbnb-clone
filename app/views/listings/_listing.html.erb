@@ -1,6 +1,6 @@
 <div class="listings">
 
-  <li> <%=listing.address %> </li>
+  <li> <%= link_to "#{listing.address}", listing_path("#{listing.id}"), id: "new_link", :class=> "btn btn-default" %> </li>
   <li> <%=listing.neighborhood %> </li>
   <li> <%=listing.city %> </li>
   <li> <%=number_to_currency(listing.price) %> </li>
