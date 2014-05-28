@@ -1,5 +1,8 @@
+==============
 Airbnb clone
-Let's make an Airbnb clone.
+--------------
+A clone of the Airbnb web site.
+---------------------------------
 
 User Stories
 
